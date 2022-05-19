@@ -8,9 +8,13 @@
 import Foundation
 
 class CardModel {
-    var name = ""
+    var id = ""
+    var left: CardSubModel
+    var right: CardSubModel
     
-    init(name: String) {
-        self.name = name
+    init(id: String, left: CardSubModel, right: CardSubModel) {
+        self.id = id
+        self.left = left
+        self.right = right
     }
 }

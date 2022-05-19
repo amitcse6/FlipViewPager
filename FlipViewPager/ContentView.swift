@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var tasks: [CardModel] = [CardModel(name: "1"), CardModel(name: "2"), CardModel(name: "3"), CardModel(name: "4")]
+    @State var tasks: [CardModel] = [
+        CardModel(id: "0", left: CardSubModel(openText: "Cat", closeText: "Please open left"), right: CardSubModel(openText: "Dog", closeText: "Please open right")),
+        CardModel(id: "1", left: CardSubModel(openText: "Potato", closeText: "Please open left"), right: CardSubModel(openText: "Garlic", closeText: "Please open right")),
+        CardModel(id: "2", left: CardSubModel(openText: "Rat", closeText: "Please open left"), right: CardSubModel(openText: "Mouse", closeText: "Please open right"))
+    ]
     
     var body: some View {
         GeometryReader { geometry in
             List {
-                ForEach(self.tasks, id: \.name) { order in
-                    CardContainer(geometrySize: CGSize(width: geometry.size.width*2-120, height: geometry.size.height))
+                ForEach(self.tasks, id: \.id) { order in
+                    CardContainer(geometrySize: CGSize(width: geometry.size.width*2-120, height: geometry.size.height), cardModel: order)
                 }
             }
         }
     }
-
-   
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

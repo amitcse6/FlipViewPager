@@ -19,6 +19,7 @@
 		8916DEDD2836503800C4047C /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916DEDC2836503800C4047C /* CardModel.swift */; };
 		8916DEE2283650A200C4047C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916DEE0283650A200C4047C /* CardView.swift */; };
 		8916DEE3283650A200C4047C /* CardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916DEE1283650A200C4047C /* CardContainer.swift */; };
+		896AF6C82836590400EDBAE7 /* CardSubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896AF6C72836590400EDBAE7 /* CardSubModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		8916DEDC2836503800C4047C /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		8916DEE0283650A200C4047C /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8916DEE1283650A200C4047C /* CardContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardContainer.swift; sourceTree = "<group>"; };
+		896AF6C72836590400EDBAE7 /* CardSubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSubModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				8916DEDC2836503800C4047C /* CardModel.swift */,
+				896AF6C72836590400EDBAE7 /* CardSubModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			files = (
 				8916DEB628364F4200C4047C /* Persistence.swift in Sources */,
 				8916DEAF28364F4000C4047C /* ContentView.swift in Sources */,
+				896AF6C82836590400EDBAE7 /* CardSubModel.swift in Sources */,
 				8916DEAD28364F4000C4047C /* FlipViewPagerApp.swift in Sources */,
 				8916DEE3283650A200C4047C /* CardContainer.swift in Sources */,
 				8916DEB928364F4200C4047C /* FlipViewPager.xcdatamodeld in Sources */,

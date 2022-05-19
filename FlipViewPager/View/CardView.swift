@@ -6,10 +6,9 @@ struct CardView: View {
     @Binding var anchor: UnitPoint
     @Binding var degree: CGFloat
     @Binding var geometrySize: CGSize
+    @Binding  var cardModel: CardModel
     
-    public var disableTest: String = "Hello World"
-    public var enableText: String = "Hello Swift"
-
+    
     var body: some View {
         return ZStack {
             Rectangle()
@@ -18,7 +17,8 @@ struct CardView: View {
                 .cornerRadius(10)
                 .zIndex(0)
             
-            Text(isOpen() ? "\(enableText) \(Int(degree)) \(Int(geometrySize.width/5.0))" : "\(disableTest) \(Int(degree)) \(Int(geometrySize.width/5.0))")
+            //Text(isOpen() ? "\(cardModel.left.openText) \(Int(degree)) \(Int(geometrySize.width/5.0))" : "\(cardModel.left.closeText) \(Int(degree)) \(Int(geometrySize.width/5.0))")
+            Text(isOpen() ? "\(mainSide == .leading ? cardModel.left.openText : cardModel.right.openText)" : "\(mainSide == .leading ? cardModel.left.closeText : cardModel.right.closeText)")
                 .background(.clear)
                 .multilineTextAlignment(.leading)
                 .foregroundColor(isOpen() ? .black : .white)
