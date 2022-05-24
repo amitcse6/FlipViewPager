@@ -18,8 +18,8 @@ struct CardView: View {
                 .cornerRadius(10)
                 .zIndex(0)
             
-            Text(isOpen() ? "\(Int(degree)) \(Int(geometrySize.width/5.0)) \(counter)" : "\(Int(degree)) \(Int(geometrySize.width/5.0)) \(counter)")
-            //Text(isOpen() ? "\(mainSide == .leading ? cardModel.left.openText : cardModel.right.openText)" : "\(mainSide == .leading ? cardModel.left.closeText : cardModel.right.closeText)")
+            //Text(isOpen() ? "\(Int(degree)) \(Int(geometrySize.width/5.0)) \(counter)" : "\(Int(degree)) \(Int(geometrySize.width/5.0)) \(counter)")
+            Text(isOpen() ? "\(mainSide == .leading ? cardModel.left.openText : cardModel.right.openText)" : "\(mainSide == .leading ? cardModel.left.closeText : cardModel.right.closeText)")
                 .background(.clear)
                 .multilineTextAlignment(.leading)
                 .foregroundColor(isOpen() ? .black : .white)
