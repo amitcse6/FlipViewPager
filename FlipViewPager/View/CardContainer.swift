@@ -56,8 +56,8 @@ struct CardContainer: View {
                         }
                     }
                     .background(Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)))
-                    //.zIndex(firstDegree < 90 ? 1 : 0)
-                    .zIndex(1)
+                    .zIndex(firstDegree < 90 ? 1 : 0)
+//                    .zIndex(1)
                     .onTapGesture {
                         print("firstCounter: \(firstCounter)")
                     }
@@ -101,8 +101,8 @@ struct CardContainer: View {
                         }
                     }
                     .background(Color(#colorLiteral(red: 0, green: 1, blue: 0, alpha: 1)))
-                    //.zIndex(secondDegree < 90 ? 1 : 0)
-                    .zIndex(1)
+                    .zIndex(secondDegree < 90 ? 1 : 0)
+//                    .zIndex(1)
                     .onTapGesture {
                         print("secondCounter: \(secondCounter)")
                     }
