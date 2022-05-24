@@ -5,6 +5,7 @@ struct CardView: View {
     @Binding var mainSide: UnitPoint
     @Binding var anchor: UnitPoint
     @Binding var degree: CGFloat
+    @Binding var counter: Int
     @Binding var geometrySize: CGSize
     @Binding  var cardModel: CardModel
     
@@ -17,8 +18,8 @@ struct CardView: View {
                 .cornerRadius(10)
                 .zIndex(0)
             
-            //Text(isOpen() ? "\(cardModel.left.openText) \(Int(degree)) \(Int(geometrySize.width/5.0))" : "\(cardModel.left.closeText) \(Int(degree)) \(Int(geometrySize.width/5.0))")
-            Text(isOpen() ? "\(mainSide == .leading ? cardModel.left.openText : cardModel.right.openText)" : "\(mainSide == .leading ? cardModel.left.closeText : cardModel.right.closeText)")
+            Text(isOpen() ? "\(Int(degree)) \(Int(geometrySize.width/5.0)) \(counter)" : "\(Int(degree)) \(Int(geometrySize.width/5.0)) \(counter)")
+            //Text(isOpen() ? "\(mainSide == .leading ? cardModel.left.openText : cardModel.right.openText)" : "\(mainSide == .leading ? cardModel.left.closeText : cardModel.right.closeText)")
                 .background(.clear)
                 .multilineTextAlignment(.leading)
                 .foregroundColor(isOpen() ? .black : .white)
